@@ -1,0 +1,21 @@
+<main class="main">
+  <section class="main-section courses">
+    <div class="container">
+        <div class="search-bar mt_25">
+          <input type="text" id="customInput" class="custom-input"   placeholder="start typing document name...">
+        </div>
+    </div>
+    <div class="card-wrapper mt_20">
+      <div class="cards">
+        <div class="cards__item mr_10 mb_10" *ngFor="let card of lists">
+          <!--<p>{{card.type}}</p>
+          <label>{{card.title}}</label>-->
+          <ul>
+            <li><span [ngClass]="[card.type == 'Technical'?'technical':card.type == 'Human Resources'?'recourses':card.type == 'Financial'?'financial':card.type == 'Marketing'?'marketing':'']">{{card.type}}</span></li>
+            <li><p>{{card.title}}</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
